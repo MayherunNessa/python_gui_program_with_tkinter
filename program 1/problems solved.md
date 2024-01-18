@@ -1,4 +1,5 @@
-These are the problems I faced in this program and how I solved them
+## These are the problems I faced in this program and how I solved them
+
 1. At first, I used the 'font' kwargs in every widgets in the input box frame section. However, it isn't a property of all of the widgets it seems, as it didn't run and showed a error instead.
 
 2. I wanted to set the width and height for the widgets, but the width and height property doesn't seem to work.
