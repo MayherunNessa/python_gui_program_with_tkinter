@@ -1,12 +1,11 @@
 import tkinter as tk
-from tkinter import ttk
 
-sizeCm = sizeMm = None
 
 #fucntions
 def convertCm_to_mm():
-    sizeCm = inputBox.get()
-    
+    sizeCm = inputBoxInt.get()
+    sizeMm = sizeCm * 10
+    outputString.set(sizeMm)
 
 #gui widgets
 #window frame
@@ -21,9 +20,15 @@ titleLabel.pack()
 #Input box frame
 inputFrame = tk.Frame(master=parent)
 inputLabel = tk.Label(master=inputFrame, text="Enter size in cm:", font="Calibri 18")
-inputBox = tk.Entry(master=inputFrame)
+
+inputBoxInt = tk.IntVar()
+inputBox = tk.Entry(master=inputFrame, textvariable=inputBoxInt)
+
 convertBtn = tk.Button(master=inputFrame, text="Convert",command=convertCm_to_mm)
-outputLabel = tk.Label(master=parent, text="output in mm", font="Calibri 18")
+
+outputString = tk.StringVar()
+outputLabel = tk.Label(master=parent, 
+text="sizeMm", font="Calibri 18", textvariable=outputString)
 
 inputFrame.pack(pady="20")
 inputLabel.pack()
