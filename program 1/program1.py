@@ -9,7 +9,7 @@ def convertCm_to_mm():
 
 #gui widgets
 #window frame
-parent = tk.Tk()
+parent = ttk.Window(themename="darkly")
 parent.title("Convert CM to MM")
 parent.geometry("600x250")
 
