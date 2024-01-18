@@ -1,5 +1,5 @@
 import tkinter as tk
-
+import ttkbootstrap as ttk
 
 #fucntions
 def convertCm_to_mm():
@@ -14,20 +14,20 @@ parent.title("Convert CM to MM")
 parent.geometry("600x250")
 
 #Frame header
-titleLabel = tk.Label(master=parent, text="Centimeter to Milimeter Converter", font="Georgia 22 bold")
+titleLabel = ttk.Label(master=parent, text="Centimeter to Milimeter Converter", font="Georgia 22 bold")
 titleLabel.pack()
 
 #Input box frame
-inputFrame = tk.Frame(master=parent)
-inputLabel = tk.Label(master=inputFrame, text="Enter size in cm:", font="Calibri 18")
+inputFrame = ttk.Frame(master=parent)
+inputLabel = ttk.Label(master=inputFrame, text="Enter size in cm:", font="Calibri 18")
 
-inputBoxInt = tk.IntVar()
-inputBox = tk.Entry(master=inputFrame, textvariable=inputBoxInt)
+inputBoxInt = ttk.IntVar()
+inputBox = ttk.Entry(master=inputFrame, textvariable=inputBoxInt)
 
-convertBtn = tk.Button(master=inputFrame, text="Convert",command=convertCm_to_mm)
+convertBtn = ttk.Button(master=inputFrame, text="Convert",command=convertCm_to_mm)
 
-outputString = tk.StringVar()
-outputLabel = tk.Label(master=parent, 
+outputString = ttk.StringVar()
+outputLabel = ttk.Label(master=parent, 
 text="sizeMm", font="Calibri 18", textvariable=outputString)
 
 inputFrame.pack(pady="20")
